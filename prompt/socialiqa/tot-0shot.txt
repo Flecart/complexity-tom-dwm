@@ -1,6 +1,0 @@
-Consider the following statement. At the end, I will ask you a question to answer.
-Here's the dialogue:
-
-{input}
-
-Think step by step and answer with a single sentence providing some thoughts.

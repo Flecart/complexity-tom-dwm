@@ -1,6 +1,0 @@
-Consider the following scenario. At the end, I will ask you to complete the scenario with a logical follow-up.
-Here's the scenario:
-@problem@
-
-This is the end of the scenario. @question@
-Think step by step, and provide the answer between <answer></answer> tags. For example, reply with <answer>answer<answer>.

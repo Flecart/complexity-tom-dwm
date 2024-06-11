@@ -1,6 +1,0 @@
-Consider the following description of a situation where some agents interact. At the end, I will ask you a question to answer.
-Here's the description of the situation:
-
-{input}
-
-Think step by step and answer with a single sentence providing some thoughts.
