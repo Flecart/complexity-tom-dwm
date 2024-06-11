@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlight and Edit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+<body>
+    <div class="container mt-5">
+        <h1>Text Highlight and Edit</h1>
+        <div class="form-group">
+            <label for="jsonFile">Choose JSON file: </label>
+
+    <select id="jsonFile">
+        <option value="tomi">tomi.json</option>
+        <option value="adv-csfb">adv-csfb.json</option>
+        <option value="mindgames">mindgames.json</option>
+        <option value="fantom">fantom.json</option>
+        <option value="socialiqa">socialiqa.json</option>
+      </select>
+            <button id="loadDataButton" class="btn btn-primary mt-2">Load Data</button>
+        </div>
+        <label class="form-check-label">
+            <input type="checkbox" id="filterCheckbox" class="form-check-input">
+            Filter for num_states >= 0
+        </label>
+        <div>
+        <label class="form-check-label">
+            <input type="checkbox" id="filterCheckbox2" class="form-check-input">
+            Filter for num_states < 0
+        </label>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col">
+            <p>Rows with num_states >= 0: <span id="countPositiveStates">0</span></p>
+        </div>
+        <div class="col">
+            <p>Rows with num_states < 0: <span id="countNegativeStates">0</span></p>
+        </div>
+    </div>
+    <table id="data-table" class="table table-bordered mt-3">
+
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Text</th>
+          <th>Number of States</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be populated here by JavaScript -->
+      </tbody>
+    </table>
+    <script>
+      // script.js
+      document.addEventListener("DOMContentLoaded", () => {
+        const tableBody = document.querySelector("#data-table tbody");
+        const filterCheckbox = document.getElementById("filterCheckbox");
+        const filterCheckbox2 = document.getElementById("filterCheckbox2");
+        const loadDataButton = document.getElementById("loadDataButton");
+        const jsonFileInput = document.getElementById("jsonFile");
+        const countPositiveStates = document.getElementById('countPositiveStates');
+        const countNegativeStates = document.getElementById('countNegativeStates');
+
+        let data = [];
+
+        loadDataButton.addEventListener("click", () => {
+          const jsonFileName = jsonFileInput.value;
+          fetchData(jsonFileName);
+        });
+
+        function fetchData(jsonFileName) {
+          fetch(`/data/${jsonFileName}`)
+            .then((response) => response.json())
+            .then((json) => {
+                // for filters
+                for (let i = 0; i < json.length; i++) {
+                    json[i].id = i;
+                }
+              data = json;
+              displayData(data);
+              updateCounts();
+            })
+            .catch((error) => console.error("Error loading JSON file:", error));
+        }
+
+        // Display data in the table
+        function displayData(data) {
+          tableBody.innerHTML = "";
+          data.forEach((item, tmp_index) => {
+            const index = item.id;
+            const row = document.createElement("tr");
+            
+            const idCell = document.createElement("td");
+            const textCell = document.createElement("td");
+            const stateCell = document.createElement("td");
+            
+            idCell.textContent = index;
+            textCell.innerHTML = `<div class="text-content" data-index="${index}">${item.prompt}</div>
+                                  <div>${item.question}</div>
+                                  <div>${item.answer}</div>`;
+            stateCell.innerHTML = `<input type="number" value="${item.num_states}" id="number-${index}" data-index="${index}" class="form-control">`;
+
+            textCell.addEventListener("mouseup", () =>
+              handleTextHighlight(index, textCell)
+            );
+            stateCell
+              .querySelector("input")
+              .addEventListener("input", (event) =>
+                handleStateChange(event, index)
+              );
+            
+            row.appendChild(idCell);
+            row.appendChild(textCell);
+            row.appendChild(stateCell);
+            tableBody.appendChild(row);
+
+            renderHighlights(index, textCell);
+          });
+        }
+
+
+    // Update counts
+    function updateCounts() {
+        const positiveCount = data.filter(item => item.num_states >= 0).length;
+        const negativeCount = data.filter(item => item.num_states < 0).length;
+        countPositiveStates.textContent = positiveCount;
+        countNegativeStates.textContent = negativeCount;
+    }
+            // Render highlights
+        function renderHighlights(index, cell) {
+            const textContent = cell.querySelector('.text-content');
+            const item = data[index];
+
+            let innerHTML = item.prompt;
+            if (item.num_highlights.length > 0) {
+                item.num_highlights = mergeHighlights(item.num_highlights);
+                let lastIndex = 0;
+                innerHTML = '';
+                item.num_highlights.forEach(([start, end], i) => {
+                    innerHTML += item.prompt.slice(lastIndex, start);
+                    innerHTML += `<span class="highlight" data-highlight-index="${i}" data-index="${index}">${item.prompt.slice(start, end)}</span>`;
+                    lastIndex = end;
+                });
+                innerHTML += item.prompt.slice(lastIndex);
+            }
+            textContent.innerHTML = innerHTML;
+
+            // Add click event to remove highlight
+            textContent.querySelectorAll('.highlight').forEach(highlight => {
+                highlight.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const highlightIndex = parseInt(event.target.dataset.highlightIndex, 10);
+                    const itemIndex = parseInt(event.target.dataset.index, 10);
+                    removeHighlight(itemIndex, highlightIndex);
+                });
+            });
+        }
+
+
+    // Merge overlapping highlights
+    function mergeHighlights(highlights) {
+        if (highlights.length <= 1) return highlights;
+
+        highlights.sort((a, b) => a[0] - b[0]);
+        const merged = [highlights[0]];
+
+        for (let i = 1; i < highlights.length; i++) {
+            const last = merged[merged.length - 1];
+            const current = highlights[i];
+
+            if (current[0] <= last[1]) {
+                last[1] = Math.max(last[1], current[1]);
+            } else {
+                merged.push(current);
+            }
+        }
+
+        return merged;
+    }
+
+
+    // Handle text highlight
+    function handleTextHighlight(index) {
+        const selection = window.getSelection();
+        const textContent = document.querySelector(`.text-content[data-index="${index}"]`);
+        const range = selection.getRangeAt(0);
+        const preSelectionRange = range.cloneRange();
+        preSelectionRange.selectNodeContents(textContent);
+        preSelectionRange.setEnd(range.startContainer, range.startOffset);
+        const start = preSelectionRange.toString().length;
+        const end = start + range.toString().length;
+
+        if (selection.toString().length > 0) {
+            data[index].num_highlights.push([start, end]);
+            data[index].num_states = data[index].num_highlights.length;
+            document.getElementById(`number-${index}`).value = data[index].num_states;
+            renderHighlights(index, textContent.parentElement);
+            saveData();
+        }
+    }
+
+    // Remove highlight
+    function removeHighlight(itemIndex, highlightIndex) {
+        data[itemIndex].num_highlights.splice(highlightIndex, 1);
+        data[itemIndex].num_states = data[itemIndex].num_highlights.length;
+        document.getElementById(`number-${itemIndex}`).value = data[itemIndex].num_states;
+        renderHighlights(itemIndex, document.querySelector(`.text-content[data-index="${itemIndex}"]`).parentElement);
+        saveData();
+    }
+
+        // Handle state change
+        function handleStateChange(event, index) {
+          const newValue = parseInt(event.target.value, 10);
+          data[index].num_states = newValue;
+          updateCounts();
+          saveData();
+        }
+
+        // Save data to JSON file (emulated here, since real file saving requires server-side code)
+        function saveData() {
+          const dataName = jsonFileInput.value;
+          const sent_data = {
+            "data": data
+          }
+
+          fetch(`/data/${dataName}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(sent_data, 4),
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              console.log("Data saved successfully:", result);
+            })
+            .catch((error) => console.error("Error saving data:", error));
+        }
+
+        const change_filter = () => {
+                const filteredData = filterCheckbox.checked
+                  ? data.filter((item) => item.num_states >= 0)
+                  : data;
+      
+                const filteredData2 = filterCheckbox2.checked
+                  ? filteredData.filter((item) => item.num_states < 0)
+                  : filteredData;
+                displayData(filteredData2);
+        }
+        // Filter data based on num_states
+        filterCheckbox.addEventListener("change", change_filter);
+        filterCheckbox2.addEventListener("change", change_filter);
+      });
+    </script>
+  </body>
+</html>
