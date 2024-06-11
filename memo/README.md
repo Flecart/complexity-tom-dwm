@@ -10,4 +10,4 @@ Just run `python3 -m memo.main [dataset-name]` where the dataset-name could be o
 - mindgames
 - socialiqa
 
-The values will be written in a file called result.txt on the root of the project
+The values will be written in a file called result.txt on the root of the project.
