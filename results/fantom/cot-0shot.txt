@@ -1,0 +1,7 @@
+Date: 2024-02-08-16-49-06
+Model: gpt-3.5-azure
+Test on 1000 samples:
+accuracy for multiple choice questions: nan
+accuracy for other questions: 0.403
+f1 score for other questions: 0.5089131279875851
+

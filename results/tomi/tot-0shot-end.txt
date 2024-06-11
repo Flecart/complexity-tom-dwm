@@ -1,0 +1,70 @@
+Date: 2024-03-19-15-43-21
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.385
+Date: 2024-03-19-16-59-28
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.403
+Date: 2024-03-19-18-07-25
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.432
+Date: 2024-03-19-19-10-04
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.398
+Above are results with old implementation only prompting.Date: 2024-04-02-12-50-52
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.523
+Date: 2024-04-02-18-39-34
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.641
+Date: 2024-04-06-13-31-00
+Model: gpt-3.5-azure
+Test on 1 samples :
+Accuracy: 1.0
+Date: 2024-04-12-16-31-49
+Model: gpt-3.5-azure
+Test on 1 samples :
+Accuracy: 1.0
+Date: 2024-04-12-16-43-37
+Model: gpt-3.5-azure
+Test on 1 samples :
+Accuracy: 1.0
+
+Below is a test by moving the question to other end of observations.
+Date: 2024-04-16-22-34-48
+Split-value: 1
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.62
+Generation type: propose
+
+Below is a test moving the question back to original positionDate: 2024-04-18-06-07-40
+Split-value: 1Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.647
+Generation type: sample
+Date: 2024-04-29-10-09-17
+Split-value: 1Model: mixtral-7B
+Test on 1 samples :
+Accuracy: 1.0
+Generation type: sample
+Date: 2024-05-12-12-45-29
+Split-value: 1Model: mixtral-7B
+Test on 1000 samples :
+Accuracy: 0.577
+Generation type: sample
+Date: 2024-05-27-21-44-04
+Split-value: 1Model: llama-3-70B
+Test on 1000 samples :
+Accuracy: 0.636
+Generation type: propose
+Date: 2024-05-28-07-10-34
+Split-value: 1Model: llama-3-8B-groq
+Test on 1000 samples :
+Accuracy: 0.541
+Generation type: propose

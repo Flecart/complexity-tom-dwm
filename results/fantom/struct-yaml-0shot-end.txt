@@ -1,0 +1,35 @@
+Date: 2024-02-23-18-03-35
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.419
+F1: 0.5325677063576384
+Date: 2024-02-23-21-08-17
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.42
+F1: 0.5306325137477234
+Date: 2024-02-23-23-46-38
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.419
+F1: 0.532989754217774
+Date: 2024-02-24-02-28-22
+Model: gpt-3.5-azure
+Test on 1000 samples :
+Accuracy: 0.418
+F1: 0.5312468570765102
+Date: 2024-04-28-03-55-31
+Split-value: 1Model: mixtral-7B
+Test on 1000 samples :
+Accuracy: 0.505
+F1: 0.0
+Date: 2024-05-07-20-46-08
+Split-value: 1Model: llama-3-8B-groq
+Test on 1000 samples :
+Accuracy: 0.504
+F1: 0.002290380254342736
+Date: 2024-06-01-17-19-56
+Split-value: 1Model: gpt-4-azure
+Test on 1000 samples :
+Accuracy: 0.516
+F1: 0.175072508279604

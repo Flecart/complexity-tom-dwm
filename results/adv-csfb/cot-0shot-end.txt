@@ -1,0 +1,184 @@
+Date: 2024-03-05-22-26-22
+Model: llama-13B
+Test on 110 samples :
+All Accuracy: 0.509090909090909
+Trusted Testimony accuracy: 0.45
+False Belief accuracy: 0.6
+True Belief accuracy: 0.45
+Late Label accuracy: 0.6
+Uninformative Label accuracy: 0.5789473684210527
+Transparent Access accuracy: 0.375
+Date: 2024-04-06-14-04-35
+Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.5454545454545454
+Trusted Testimony accuracy: 0.6
+False Belief accuracy: 0.45
+True Belief accuracy: 0.65
+Late Label accuracy: 0.7333333333333333
+Uninformative Label accuracy: 0.42105263157894735
+Transparent Access accuracy: 0.4375
+Date: 2024-04-06-15-15-58
+Model: gpt-3.5-azure
+Test on 100 samples :
+All Accuracy: 0.65
+Trusted Testimony accuracy: 0.8947368421052632
+False Belief accuracy: 0.4117647058823529
+True Belief accuracy: 0.7894736842105263
+Late Label accuracy: 0.6428571428571429
+Uninformative Label accuracy: 0.4375
+Transparent Access accuracy: 0.6666666666666666
+Date: 2024-04-07-12-50-00
+Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.6454545454545455
+Trusted Testimony accuracy: 0.9
+False Belief accuracy: 0.4
+True Belief accuracy: 0.8
+Late Label accuracy: 0.6666666666666666
+Uninformative Label accuracy: 0.42105263157894735
+Transparent Access accuracy: 0.6875
+Date: 2024-04-13-15-32-44
+Output type: multipleModel: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.8272727272727273
+Trusted Testimony accuracy: 0.9
+False Belief accuracy: 0.8
+True Belief accuracy: 0.8
+Late Label accuracy: 0.7333333333333333
+Uninformative Label accuracy: 0.9473684210526315
+Transparent Access accuracy: 0.75
+
+
+Date: 2024-04-26-08-01-03
+Output type: multipleSplit-value: 1Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.7636363636363637
+Trusted Testimony accuracy: 0.85
+False Belief accuracy: 0.6
+True Belief accuracy: 0.8
+Late Label accuracy: 0.6
+Uninformative Label accuracy: 1.0
+Transparent Access accuracy: 0.6875
+
+Date: 2024-04-27-09-43-15
+Output type: multipleSplit-value: 1Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.6818181818181818
+Trusted Testimony accuracy: 0.8
+False Belief accuracy: 0.6
+True Belief accuracy: 0.7
+Late Label accuracy: 0.7333333333333333
+Uninformative Label accuracy: 0.7368421052631579
+Transparent Access accuracy: 0.5
+
+Date: 2024-04-27-21-30-52
+Output type: multipleSplit-value: 1Model: mixtral-7B
+Test on 110 samples :
+All Accuracy: 0.5272727272727272
+Trusted Testimony accuracy: 0.75
+False Belief accuracy: 0.45
+True Belief accuracy: 0.7
+Late Label accuracy: 0.26666666666666666
+Uninformative Label accuracy: 0.47368421052631576
+Transparent Access accuracy: 0.4375
+
+Date: 2024-05-03-08-06-02
+Output type: multipleSplit-value: 1Model: llama-3-70B
+Test on 110 samples :
+All Accuracy: 0.16363636363636364
+Trusted Testimony accuracy: 0.25
+False Belief accuracy: 0.1
+True Belief accuracy: 0.25
+Late Label accuracy: 0.06666666666666667
+Uninformative Label accuracy: 0.21052631578947367
+Transparent Access accuracy: 0.0625
+
+Date: 2024-05-03-08-12-00
+Output type: multipleSplit-value: 1Model: llama-3-70B
+Test on 110 samples :
+All Accuracy: 0.17272727272727273
+Trusted Testimony accuracy: 0.35
+False Belief accuracy: 0.05
+True Belief accuracy: 0.3
+Late Label accuracy: 0.06666666666666667
+Uninformative Label accuracy: 0.15789473684210525
+Transparent Access accuracy: 0.0625
+
+Date: 2024-05-03-08-22-35
+Output type: multipleSplit-value: 1Model: llama-3-70B
+Test on 110 samples :
+All Accuracy: 0.6454545454545455
+Trusted Testimony accuracy: 0.9
+False Belief accuracy: 0.3
+True Belief accuracy: 0.9
+Late Label accuracy: 0.6666666666666666
+Uninformative Label accuracy: 0.5789473684210527
+Transparent Access accuracy: 0.5
+
+Date: 2024-05-06-23-41-22
+Output type: multipleSplit-value: 1Model: llama-3-8B-groq
+Test on 110 samples :
+All Accuracy: 0.7272727272727273
+Trusted Testimony accuracy: 0.8
+False Belief accuracy: 0.65
+True Belief accuracy: 0.8
+Late Label accuracy: 0.8
+Uninformative Label accuracy: 0.6842105263157895
+Transparent Access accuracy: 0.625
+
+Date: 2024-05-17-18-07-19
+Output type: multipleSplit-value: 1Model: mixtral-7B
+Test on 110 samples :
+All Accuracy: 0.5909090909090909
+Trusted Testimony accuracy: 1.0
+False Belief accuracy: 0.35
+True Belief accuracy: 0.65
+Late Label accuracy: 0.6
+Uninformative Label accuracy: 0.47368421052631576
+Transparent Access accuracy: 0.4375
+
+Date: 2024-05-18-18-09-41
+Output type: multipleSplit-value: 1Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.7090909090909091
+Trusted Testimony accuracy: 0.85
+False Belief accuracy: 0.65
+True Belief accuracy: 0.6
+Late Label accuracy: 0.8666666666666667
+Uninformative Label accuracy: 0.7368421052631579
+Transparent Access accuracy: 0.5625
+
+Date: 2024-05-20-09-32-04
+Output type: multipleSplit-value: 1Model: llama-3-8B-groq
+Test on 110 samples :
+All Accuracy: 0.42727272727272725
+Trusted Testimony accuracy: 0.65
+False Belief accuracy: 0.45
+True Belief accuracy: 0.5
+Late Label accuracy: 0.3333333333333333
+Uninformative Label accuracy: 0.3684210526315789
+Transparent Access accuracy: 0.1875
+
+Date: 2024-05-30-12-01-07
+Output type: multipleSplit-value: 1Model: gpt-4-azure
+Test on 110 samples :
+All Accuracy: 0.5909090909090909
+Trusted Testimony accuracy: 0.8
+False Belief accuracy: 0.2
+True Belief accuracy: 1.0
+Late Label accuracy: 0.5333333333333333
+Uninformative Label accuracy: 0.5263157894736842
+Transparent Access accuracy: 0.4375
+
+Date: 2024-06-08-11-28-13
+Output type: multipleSplit-value: 5Model: gpt-3.5-azure
+Test on 110 samples :
+All Accuracy: 0.7090909090909091
+Trusted Testimony accuracy: 0.85
+False Belief accuracy: 0.65
+True Belief accuracy: 0.6
+Late Label accuracy: 0.8666666666666667
+Uninformative Label accuracy: 0.7368421052631579
+Transparent Access accuracy: 0.5625
+

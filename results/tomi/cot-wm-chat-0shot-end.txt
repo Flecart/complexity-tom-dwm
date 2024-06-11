@@ -1,0 +1,144 @@
+Date: 2024-03-15-17-11-43
+Model: gpt-3.5-azure-chat
+Test on 2 samples :
+Accuracy: 1.0
+Date: 2024-03-15-17-12-18
+Model: gpt-3.5-azure-chat
+Test on 2 samples :
+Accuracy: 1.0
+Date: 2024-03-15-17-18-42
+Model: gpt-3.5-azure-chat
+Test on 100 samples :
+Accuracy: 0.69
+Date: 2024-03-15-18-15-13
+Model: gpt-3.5-azure-chat
+Test on 500 samples :
+Accuracy: 0.62
+Date: 2024-03-15-21-22-04
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.601
+Date: 2024-03-15-23-19-43
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.624
+Date: 2024-03-16-02-14-41
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.622
+Date: 2024-03-16-06-00-52
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.61
+Date: 2024-03-16-10-25-07
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.606
+Date: 2024-03-16-14-02-42
+Model: gpt-3.5-azure-chat
+Test on 2 samples :
+Accuracy: 1.0
+Date: 2024-04-03-16-19-59
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.602
+Date: 2024-04-03-17-06-36
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.623
+Date: 2024-04-03-18-09-41
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.625
+Date: 2024-04-03-19-18-52
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.613
+Date: 2024-04-03-20-40-14
+Model: gpt-3.5-azure-chat
+Test on 1000 samples :
+Accuracy: 0.612
+Date: 2024-04-29-10-04-49
+Split-value: 1Model: mixtral-7B-chat
+Test on 1 samples :
+Accuracy: 1.0
+Date: 2024-04-29-10-08-05
+Split-value: 1Model: mixtral-7B-chat
+Test on 1 samples :
+Accuracy: 1.0
+Date: 2024-04-29-16-01-29
+Split-value: 1Model: mixtral-7B-chat
+Test on 1000 samples :
+Accuracy: 0.644
+Date: 2024-05-01-23-50-13
+Split-value: 2Model: mixtral-7B-chat
+Test on 1000 samples :
+Accuracy: 0.627
+Date: 2024-05-02-04-32-24
+Split-value: 3Model: mixtral-7B-chat
+Test on 1000 samples :
+Accuracy: 0.598
+Date: 2024-05-02-13-16-16
+Split-value: 4Model: mixtral-7B-chat
+Test on 1000 samples :
+Accuracy: 0.569
+Date: 2024-05-02-21-48-58
+Split-value: 5Model: mixtral-7B-chat
+Test on 1000 samples :
+Accuracy: 0.557
+Date: 2024-05-03-07-59-06
+Split-value: 1Model: llama-3-70B-chat
+Test on 2 samples :
+Accuracy: 0.5
+Date: 2024-05-11-19-49-37
+Split-value: 1Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.532
+Date: 2024-06-04-08-56-14
+Split-value: 1Model: llama-3-70B-chat
+Test on 1000 samples :
+Accuracy: 0.64
+Date: 2024-06-04-09-43-57
+Split-value: 2Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.556
+Date: 2024-06-04-11-16-54
+Split-value: 2Model: llama-3-70B-chat
+Test on 1000 samples :
+Accuracy: 0.627
+Date: 2024-06-04-14-22-47
+Split-value: 3Model: llama-3-70B-chat
+Test on 1000 samples :
+Accuracy: 0.615
+Date: 2024-06-04-14-49-20
+Split-value: 3Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.545
+Date: 2024-06-04-18-13-00
+Split-value: 4Model: llama-3-70B-chat
+Test on 1000 samples :
+Accuracy: 0.629
+Date: 2024-06-05-00-16-31
+Split-value: 4Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.56
+Date: 2024-06-05-11-36-19
+Split-value: 5Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.534
+Date: 2024-06-06-17-24-46
+Split-value: 1Model: llama-3-8B-groq-chat
+Test on 1000 samples :
+Accuracy: 0.526
+Date: 2024-06-06-22-10-59
+Split-value: 1Model: gpt-4-azure-chat
+Test on 1000 samples :
+Accuracy: 0.608
+Date: 2024-06-07-18-34-39
+Split-value: 2Model: gpt-4-azure-chat
+Test on 1000 samples :
+Accuracy: 0.562
+Date: 2024-06-09-00-08-33
+Split-value: 3Model: gpt-4-azure-chat
+Test on 1000 samples :
+Accuracy: 0.567
