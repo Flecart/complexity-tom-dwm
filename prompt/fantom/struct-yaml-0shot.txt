@@ -1,0 +1,14 @@
+Consider the following dialogue where multiple agents interact.
+@problem@
+
+Now give a structured representation of the dialogue in YAML format. Keep track of the information that each agent has access to at each point in the dialogue.
+It is important to have a relative representation of the information that each agent has access to at each point in the dialogue.
+====
+Consider the following dialogue where multiple agents interact.
+@problem@
+
+Here is the YAML representation of the text.
+@structure@
+
+Question: @question@
+Answer between the tags with a sentence that is the answer of the above question

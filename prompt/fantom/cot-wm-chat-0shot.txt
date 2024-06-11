@@ -1,0 +1,15 @@
+I give you a phrase of a dialogue between agents. I will reveal more parts of it later. At the end, I will give you a question you must answer. 
+For each phrase, you must:
+# 1. Write down a succinct description of what each agent knows about the environment and about the other agents. Keep the description short and do not produce redundant information. 
+# 2. Each considerations you make must be preceded by the symbol #GPT#.
+Here's the dialogue:
+
+@problem@
+
+====
+This is the end of the dialogue. Now, this is a question for you to answer.
+
+Question: @question@
+
+Answer to the question, or say you don't have information.
+Think step by step and provide the answer between <answer></answer> tags.

@@ -1,0 +1,50 @@
+propose_prompt: "Consider the following scenario where multiple agents interact. At the end, I will ask you a question to answer.
+Here's the scenario:
+
+{input}
+
+Think step by step and answer with a single sentence providing some thoughts.
+"
+
+propose_prompt_1: "Consider the following scenario where multiple agents interact. At the end, I will ask you a question to answer.
+Here's the scenario:
+
+Input:
+An lunch box has been left behind at the fast food restaurants after a school's eating out day event. 
+Then lunch box has only pickles in it, but Jeff forgot to replace the sticker that says hamburger. 
+No hamburger was served at the event.
+Jeff strolls past the bench on which then lunch box is sitting, and sees it. He reads the sticker.
+He is delighted to have found this lunch box.
+Question: Fill in the blank with the best option. He is hoping to find some _
+- pickles
+- hamburger
+Possible Thoughts:
+- Jeff sees the hamburger sticker and hopes to find some hamburgers.
+- Jeff knows that no hamburgers were served at the event, so he hopes to find some pickles.
+- Jeff finds pickles in the lunch box.
+
+Think step by step and answer with a single sentence providing some thoughts.
+
+Input:
+{input}
+Possible Thoughts:
+"
+
+value_prompt: '
+
+'
+
+vote_prompt: 'Given a scenario and several observation choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {{s}}", where s the integer id of the choice.
+{input}
+
+Here are some possible observations:
+
+'
+
+score_prompt: 'Given this scenario and possible observations, complete the scenario with a logical follow-up.
+{problem}
+{observations}
+{question}
+
+Provide the answer between <answer></answer> tags. For example, reply with <answer>answer<answer>.
+'

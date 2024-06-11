@@ -1,0 +1,52 @@
+propose_prompt: "Consider the following dialogue where multiple agents interact. At the end, I will ask you a question to answer.
+Here's the dialogue:
+
+{input}
+
+Think step by step and list all possible answers providing a single answer on each line.
+"
+
+propose_prompt_1: "Consider the following dialogue where multiple agents interact. At the end, I will ask you a question to answer.
+Here's the dialogue:
+
+Input:
+Tom: I bought a new car.
+Alice: Oh cool, Tom! Sorry I need to leave for a moment, see you!
+Bob: See you Alice!
+Tom: See you! 
+Bob: So, what kind of car did you buy?
+Tom: I got a red Ford Fiesta!
+Bob: Wow cool, can I see it?
+Alice: Hey I am back, so Tom, when will you show us your new car?
+Tom: You can visit me next Friday night!
+Alice: Sure!
+Bob: Great, see you there then!
+What colour Alice thinks is Tom's car?
+Possible Thoughts:
+- Alice cannot know what Bob and Tom said because she left
+- Alice knows the car is red because Tom said so
+- When alice left, she heard Tom saying the car is red
+- Alice can't hear Tom and Bob's conversation after she left
+
+Think step by step and list all possible answers providing a single answer on each line.
+
+Input:
+{input}
+Possible Thoughts:
+"
+
+value_prompt: ''
+
+vote_prompt: 'Given an dialogue and several observation choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {{s}}", where s the integer id of the choice.
+{input}
+
+Here are some possible observations:
+'
+
+score_prompt: "Given this dialogue and possible observations, answer the question  or say you don't have information.
+{problem}
+{observations}
+{question}
+
+Provide the answer between <answer></answer> tags.
+"

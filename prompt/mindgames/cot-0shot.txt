@@ -1,0 +1,11 @@
+Consider the following description of a situation where some agents interact. 
+At the end, I will ask you whether a statement is in entailment or not with the description I gave you.
+Here's the description of the situation:
+@problem@
+
+This is the end of the description. Now, consider this statement.
+
+Statement: @question@
+
+If the statement is entailed by the description of the situation provided above, reply with entailment, otherwise reply with not_entailment.
+Think step by step and enclose the answer between <answer></answer> tags, so reply with either <answer>entailment</answer> or <answer>not_entailment</answer>.

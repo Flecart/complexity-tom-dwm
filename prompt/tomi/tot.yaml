@@ -1,0 +1,47 @@
+propose_prompt: "Consider the following dialogue where multiple agents interact. At the end, I will ask you a question to answer.
+Here's the dialogue:
+
+{input}
+
+Think step by step and list all possible answers providing a single answer on each line.
+"
+
+propose_prompt_1: "Consider the following dialogue where multiple agents interact. At the end, I will ask you a question to answer.
+Input:
+Oliver entered the porch.
+Owen entered the porch.
+Abigail entered the porch.
+The broccoli is in the bucket.
+Abigail exited the porch.
+Owen exited the porch.
+Owen hates the peach
+Oliver moved the broccoli to the pantry.
+Where was the broccoli at the beginning?
+Possible Thoughts:
+The broccoli was in the bucket.
+The broccoli was in the pantry.
+The broccoli was moved.
+The broccoli was in the bucket in the porch.
+Input:
+{input}
+Possible Thoughts:
+"
+
+value_prompt: '
+
+'
+
+vote_prompt: 'Given an dialogue and several observation choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {{s}}", where s the integer id of the choice.
+{input}
+
+Here are some possible observations:
+
+'
+
+score_prompt: 'Given this dialogue and possible observations, answer the question with one word and provide the answer between <answer></answer> tags.
+{problem}
+{question}
+{observations}
+
+For example, reply with <answer>vase</answer>.
+'

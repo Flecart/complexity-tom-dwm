@@ -1,0 +1,47 @@
+propose_prompt: "Consider the following statement. At the end, I will ask you a question to answer.
+Here's the statement:
+
+{input}
+
+Think step by step and list all possible answers providing a single answer on each line.
+"
+
+propose_prompt_1: "Consider the following statement. At the end, I will ask you a question to answer.
+Here's the statement:
+
+Input:
+Cameron decided to have a barbecue and gathered her friends together.
+How would Others feel as a result?
+- like attending
+- like staying home
+- a good friend to have
+Possible Thoughts:
+- People are usually nice, so they would like to attend.
+- They have a grudge against Cameron, so they would stay home.
+- They are good friends, so they would like to attend.
+
+Input:
+{input}
+Possible Thoughts:
+"
+
+value_prompt: '
+
+'
+# TODO: cambiare i prompt qui per vedere se vanno bene.
+# TODO(ema): vedere questi e quello in file `tot-0shot.txt` che è usato per la proposal di idee in ToT.
+# In `abstract_dataset` righe 388 ci sono i print se vuoi toglierli.
+vote_prompt: 'Given an statement and several observation choices, decide which choice is most promising. Analyze each choice in detail, then conclude in the last line "The best choice is {{s}}", where s the integer id of the choice.
+{input}
+
+Here are some possible observations:
+
+'
+
+score_prompt: 'Given this statement and possible observations, answer the question with one word and provide the answer between <answer></answer> tags.
+{problem}
+{observations}
+{question}
+
+For example, reply with <answer>4</answer>.
+'
