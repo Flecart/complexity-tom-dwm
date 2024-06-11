@@ -1,0 +1,92 @@
+{
+    "gpt-3.5": {
+        "organization": "<change me>",
+        "name":"gpt-3.5-turbo",
+        "key":"sk-<redacted>"
+    }, 
+    "gpt-3.5-instruct": {
+        "organization": "<change me>",
+        "name":"gpt-3.5-turbo-instruct",
+        "key":"sk-proj-<redacted>"
+    },
+    "gpt-4": {
+        "organization": "<change me>",
+        "name":"gpt-4",
+        "key":"sk-<redacted>"
+    },
+    "llama2-70B": {
+        "organization": "meta-huggingface",
+        "name":"llama2",
+        "key":"<redacted>"
+    },
+    "mixtral-7B": {
+        "organization": "mistralai",
+        "name":"mixtral7",
+        "key":"<redacted>"
+    },    
+    "mixtral-7B-chat": {
+        "organization": "mistralai",
+        "name":"mixtral7",
+        "key":"<redacted>"
+    },
+    "pythia-12B": {
+        "organization": "eleutherAI",
+        "name":"pythia-12B",
+        "key":"None"
+    },
+    "llama-13B": {
+        "organization": "local",
+        "name":"llama-13B",
+        "key":"None"
+    },
+    "llama-3-8B-groq": {
+        "organization": "local",
+        "name":"llama-3-8B",
+        "key":"<redacted>"
+    },
+    "llama-3-8B-groq-chat": {
+        "organization": "local",
+        "name":"llama-3-8B-chat",
+        "key":"<redacted>"
+    },    
+    "llama-3-8B": {
+        "organization": "local",
+        "name":"llama-3-8B",
+        "key":"None"
+    },
+    "llama-3-8B-chat": {
+        "organization": "local",
+        "name":"llama-3-8B-chat",
+        "key":"None"
+    },       
+    "llama-3-70B-hf": {
+        "organization": "meta-llama",
+        "name":"llama-3-70B",
+        "key":"<redacted>"
+    },
+    "llama-3-70B-hf-chat": {
+        "organization": "meta-llama",
+        "name":"llama-3-70B-chat",
+        "key":"<redacted>"
+    },    
+    "llama-3-70B": {
+        "organization": "local",
+        "name":"llama-3-8B",
+        "key":"<redacted>"
+    },
+    "llama-3-70B-chat": {
+        "organization": "local",
+        "name":"llama-3-8B-chat",
+        "key":"<redacted>"
+    },
+    "gemma-2B": {
+        "organization": "google",
+        "name":"gemma-2b-it",
+        "key":"None"
+    },
+    "gemma-7B": {
+        "organization": "google",
+        "name":"gemma-7b-it",
+        "key":"None"
+    }
+}
