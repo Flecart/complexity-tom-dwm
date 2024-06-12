@@ -58,7 +58,7 @@ class AbstractDataset(metaclass=ABCMeta):
         self.results_file = f"./results/{self.dataset_name}/{self.query_method}-{self.kshots}shot-{self.query_position}.txt"
 
         if self.has_wandb:
-            self.wandb = wandb.init(project="llm-tom", config={
+            self.wandb = wandb.init(project="llm-tom-test", config={
                 "dataset_name": args.dataset_name,
                 "model_name": args.model_name,
                 "kshots": args.kshots,
