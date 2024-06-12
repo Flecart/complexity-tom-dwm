@@ -37,6 +37,8 @@ splits = partition_function(task, question)
 #     "Amelia exited the master_bedroom.\nJayden moved the strawberry to the pantry.\nEmma entered the master_bedroom",
 # ]
 
+# ---------- Now we start with the DWM prompting ----------
+
 # The initial prompt for the language model that asks for the completion.
 prefix = """I give you a phrase of a dialogue between agents. I will reveal more parts of it later. At the end, I will give you a question you must answer. 
 For each phrase, you must:
@@ -64,8 +66,9 @@ For example, reply with <answer>vase</answer>.
 """
 
 conversation.append({'role': 'user', 'content': final_ask})
-description = chat(conversation)
-conversation.append()
+answer = chat(conversation)
+
+# ---------- Now handle the LLMs answer ----------
 ```
 
 In our case an approximation of the `partition_function` is implemented in the `split_context` function in `main.abstract_dataset`. The chat function is `queryLLM` in `main.utils` and generalizes a call to llms given the name and the config.
