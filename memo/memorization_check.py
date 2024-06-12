@@ -5,6 +5,8 @@ import tiktoken
 import numpy as np
 from thefuzz import fuzz
 import backoff
+import re
+
 
 @backoff.on_exception(backoff.expo, Exception, max_time=120)
 def queryGPT35Instruct(prompt: str):
@@ -149,7 +151,6 @@ def main(filename: str):
         f.write(f"Fuzzy matches (ratio, std): {np.mean(fuzzy_matches), np.std(fuzzy_matches)}\n")
 
 if __name__ == "__main__":
-    import re
     # ToMi has 438635 tokens
     # filename = os.path.join("data", "tomi", "test" + ".txt")
     # filename = get_dataset("data/tomi/test.txt")
