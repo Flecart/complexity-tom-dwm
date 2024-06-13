@@ -38,7 +38,7 @@
   </style>
 <body>
     <div class="container mt-5">
-        <h1>Text Highlight and Edit</h1>
+        <h1>Labelling Application</h1>
         <div class="form-group">
             <label for="jsonFile">Choose JSON file: </label>
 
@@ -48,9 +48,11 @@
         <option value="mindgames">mindgames.json</option>
         <option value="fantom">fantom.json</option>
         <option value="socialiqa">socialiqa.json</option>
-      </select>
+    </select>
             <button id="loadDataButton" class="btn btn-primary mt-2">Load Data</button>
-        </div>
+    </div>
+    <div class="container">
+
         <label class="form-check-label">
             <input type="checkbox" id="filterCheckbox" class="form-check-input">
             Filter for num_states >= 0
@@ -61,6 +63,7 @@
             Filter for num_states < 0
         </label>
     </div>
+</div>
 
     <div class="row mt-3">
         <div class="col">
@@ -73,7 +76,7 @@
     <table id="data-table" class="table table-bordered mt-3">
 
       <thead>
-        <tr>
+        <tr class="thead-dark">
           <th>Id</th>
           <th>Text</th>
           <th>Number of States</th>
