@@ -1,6 +1,6 @@
 # On the Notion of Complexity in ToM tasks
 
-See main paper -> [TODO]
+See main paper -> [arxiv](https://arxiv.org/abs/2406.11911)
 
 ## Replication of the results.
 
