@@ -1,97 +1,186 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta
+      name="description"
+      content="We propose a complexity framework to analyze Theory of Mind tasks. Inspired by this theory, we propose a prompting method that elicits stateful reasoning of LLMs."
+    />
+    <meta
+      property="og:title"
+      content="A Notion of Complexity for Theory of Mind via Discrete World Models"
+    />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://flecart.github.io/complexity-tom-dwm"
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta
+      property="og:image"
+      content="static/paper-images/complexity-vs-error-rate.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta
+      name="twitter:title"
+      content="A Notion of Complexity for Theory of Mind via Discrete World Models"
+    />
+    <meta
+      name="twitter:description"
+      content="We propose a complexity framework to analyze Theory of Mind tasks. Inspired by this theory, we propose a prompting method that elicits stateful reasoning of LLMs."
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta
+      name="twitter:image"
+      content="static/paper-images/dwm-example-numbered.png"
+    />
+    <meta
+      name="twitter:card"
+      content="static/paper-images/complexity-vs-error-rate.png"
+    />
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta
+      name="keywords"
+      content="theory-of-mind, prompting, complexity, artificial-intelligence"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <title>A Notion of Complexity for Theory of Mind</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="static/images/favicon-192x192.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">A Notion of Complexity for Theory of Mind Problems via Discrete World Models</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Angelo Huang</a><sup>*</sup>,</span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                A Notion of Complexity for Theory of Mind via Discrete World
+                Models
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=4_91m08AAAAJ&hl=en" target="_blank">Emanuele La Malfa</a>,</span>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=PkjwHRoAAAAJ&hl=en" target="_blank">Samuele Marro</a>,
-                  </span> <br>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=NRnYPnUAAAAJ&hl=en" target="_blank">Andrea Asperti</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Antony Cohn</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=JD8v9fkAAAAJ&hl=en" target="_blank">Michael Woolridge</a>
-                  </span>
-            </div>
+                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank"
+                    >X. Angelo Huang</a
+                  ><sup>*1</sup>,</span
+                >
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=4_91m08AAAAJ&hl=en"
+                    target="_blank"
+                    >Emanuele La Malfa</a
+                  ><sup>2,3</sup>,</span
+                >
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=PkjwHRoAAAAJ&hl=en"
+                    target="_blank"
+                    >Samuele Marro</a
+                  ><sup>1</sup>,
+                </span>
+                <br />
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=NRnYPnUAAAAJ&hl=en"
+                    target="_blank"
+                    >Andrea Asperti</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://eps.leeds.ac.uk/computing/staff/76/professor-anthony-tony-g-cohn-freng-flsw-ceng-citp"
+                    target="_blank"
+                    >Anthony G. Cohn</a
+                  ><sup>3,4</sup>,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=JD8v9fkAAAAJ&hl=en"
+                    target="_blank"
+                    >Michael Wooldridge</a
+                  ><sup>2,3</sup>
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of Bologna and Oxford University<br>EMNLP 2024</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">University of Bologna</span><sup>1</sup>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+                <span class="author-block"
+                >University of Oxford</span
+              ><sup>2</sup>
+              </div>
 
-                    <!-- Supplementary PDF link
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  >The Alan Turing Institute</span
+                ><sup>3</sup>
+
+                <span class="author-block"
+                >University of Leeds</span
+              ><sup>4</sup>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                Preprint
+                <span class="eql-cntrb"><small><br><sup>*</sup>First author, work done while visiting University of Oxford</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- TODO: Arxiv PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2406.11911"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Supplementary PDF link
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -104,40 +193,46 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/Flecart/On-The-Complexity-of-Theory-of-Mind" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: ArXiv abstract Link --> 
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <a
+                      href="https://github.com/flecart/complexity-tom-dwm"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <!-- TODO: ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2406.11911"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
+    <!-- Teaser video-->
+    <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-      Your video here -->   <!--
+      Your video here -->
+    <!--
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -147,57 +242,171 @@
     </div>
   </div>
 </section> -->
-<!-- End teaser video -->
+    <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Theory of Mind (ToM) can be used to assess the capabilities of Large Language Models (LLMs) in complex scenarios where social reasoning is required.
-            While the research community has proposed many benchmarks, the inherent difficulty of each problem is unclear and varies largely.
-            This work proposes a framework to measure the complexity of ToM tasks. 
-            For a ToM task expressed in natural language, the framework quantifies a problem's complexity as the number of states necessary to solve it correctly. 
-            Our measure also accounts for spurious states designed to make the problem harder. 
-            We use our method to assess the complexity of five widely adopted ToM benchmarks. 
-            On top of this framework, we design a prompting technique that augments the information available to a model with a description of how the environment changes with the agents' interactions.
-            We name this technique Discrete World Models (DWM) and show how it elicits superior performance on ToM tasks where it naturally applies.
-          </p>
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Theory of Mind (ToM) can be used to assess the capabilities of
+                Large Language Models (LLMs) in complex scenarios where social
+                reasoning is required. While the research community has proposed
+                many ToM benchmarks, their hardness varies greatly, and their
+                complexity is not well defined. This work proposes a framework
+                to measure the complexity of ToM tasks. We quantify a problem's
+                complexity as the number of states necessary to solve it
+                correctly. Our complexity measure also accounts for spurious
+                states of a ToM problem designed to make it apparently harder.
+                We use our method to assess the complexity of five widely
+                adopted ToM benchmarks. On top of this framework, we design a
+                prompting technique that augments the information available to a
+                model with a description of how the environment changes with the
+                agents' interactions. We name this technique Discrete World
+                Models (DWM) and show how it elicits superior performance on ToM
+                tasks.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End paper abstract -->
 
-
-<section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <div>
-
-            Lorem ipsum
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Methods</h2>
+              <div>
+                We propose a method a to evaluate ToM problems along side a
+                prompting method to elicit stateful reasoning of LLMs.
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-two-thirds">
+                    <figure class="image">
+                      <img
+                        src="static/paper-images/statefulness-example.png"
+                        alt="Complexity vs error rate"
+                      />
+                      <figcaption>
+                        How statefulness and statelessness are computed. For
+                        \(obj_1\), an optimal split to track the
+                        <span style="color: purple; font-weight: bold"
+                          >apple</span
+                        >
+                        merges the first two states and chunks of the input
+                        prompt. For \(obj_2\), which involves the
+                        \(1^{\text{st}}\)-order belief of
+                        <span style="color: blue; font-weight: bold">Bob</span>,
+                        the statefulness is higher, with \(e_2\) that cannot be
+                        merged with \(e_3\) as it introduces partial
+                        observability. The complexity of the task (bottom) is
+                        computed as in the paper, with the complexity of
+                        stateless objects that is discounted as not directly
+                        relevant to the question/answer.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-two-thirds">
+                    <figure class="image">
+                      <img
+                        src="static/paper-images/dwm-example-numbered.png"
+                        alt="Complexity vs error rate"
+                      />
+                      <figcaption>
+                        Left: illustration of DWM prompting. We interactively
+                        prompt an LLM with a ToM problem, asking to provide a
+                        succinct representation of each agent's beliefs.
+                        <strong>Right:</strong> schematic presentation of the
+                        DWM method. We first break the input string into \(T\)
+                        <em>state descriptions</em>. Then, for each part, we ask
+                        the LLM to provide the <strong>state event</strong> of
+                        the environment and how it changes. In the last step,
+                        every part of the input and description is fed to the
+                        LLM with another prompt to get the answer for the task.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Results</h2>
+              <div>
+                We show that the complexity correlates with the error rate of
+                the models on the ToM tasks.
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-half">
+                    <figure class="image">
+                      <img
+                        src="static/paper-images/complexity-vs-error-rate.png"
+                        alt="Complexity vs error rate"
+                      />
+                      <figcaption>
+                        Each boxplot summarizes the complexity analysis of the
+                        five ToM benchmarks in ascending order. We report the
+                        average <strong>error rate</strong> (i.e., 1-accuracy)
+                        of GPT-3.5-Turbo, GPT-4, Mixtral 8x7B and LLaMA3-70B on
+                        the task when prompted with CoT
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <!-- <div class="column is-half">
+                <figure class="image">
+                    <img src="path_to_image2.jpg" alt="Image 2">
+                    <figcaption>Caption for Image 2</figcaption>
+                </figure>
+            </div> -->
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds">
+              <figure class="image">
+                <img
+                  src="static/paper-images/gpt-3.5-dwm-results.png"
+                  alt="Complexity vs error rate"
+                />
+                <img
+                  src="static/paper-images/mixtral-dwm-results.png"
+                  alt="Complexity vs error rate"
+                />
+                <figcaption>
+                  Results for GPT-3.5 and Mixstral
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-</section>
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
+    </section>
+    <!-- Image carousel -->
+    <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
          Your image here -->
-         <!--
+    <!--
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
@@ -225,17 +434,14 @@
 </div>
 </div>
 </section> -->
-<!-- End image carousel -->
+    <!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
+    <!-- Youtube video -->
+    <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
        Paper video. -->
-       <!--
+    <!--
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -248,11 +454,10 @@
     </div>
   </div>
 </section> -->
-<!-- End youtube video -->
+    <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
+    <!-- Video carousel -->
+    <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
@@ -279,10 +484,10 @@
     </div>
   </div>
 </section> -->
-<!-- End video carousel -->
+    <!-- End video carousel -->
 
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
+    <!-- Paper poster -->
+    <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -293,49 +498,56 @@
       </div>
     </div>
   </section> -->
-<!--End paper poster -->
+    <!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>
-        @article{huang2024notion,
-            title = {A Notion of Complexity for Theory of Mind Problems via Discrete World Models},
-            author = {Huang, Angelo and La Malfa, Emanuele and Marro, Samuele and Asperti, Andrea and Cohn, Antony and Woolridge, Michael},
-            journal={arXiv preprint arXiv:},
-            year={2024}
-        }
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+    @article{huang2024notion,
+        title={A Notion of Complexity for Theory of Mind via Discrete World Models}, 
+        author={X. Angelo Huang and Emanuele La Malfa and Samuele Marro and Andrea Asperti and Anthony Cohn and Michael Wooldridge},
+        year={2024},
+        eprint={2406.11911},
+        archivePrefix={arXiv},
+    }
       </code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+      </div>
+    </section>
+    <!--End BibTex citation -->
 
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-             <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was adapted from the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
   </body>
-  </html>
+</html>
