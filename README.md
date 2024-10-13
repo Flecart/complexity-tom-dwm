@@ -1,6 +1,12 @@
-# On the Notion of Complexity in ToM tasks
+# A Notion of Complexity for Theory of Mind via Discrete World Models
 
 See main paper -> [arxiv](https://arxiv.org/abs/2406.11911)
+
+## Main results
+- Complexity framework to evaluate the difficulty of the question and answering tasks that work!
+- Connection with Cognitive science frameworks explaining this complexity setting
+- Analysis of a prompting method that helps model reasoning by highlighting the important parts.
+- Memorization analysis of modern LLMs on those ToM tasks -> Doesn't seem to affect the QA largely!
 
 ## Replication of the results.
 
