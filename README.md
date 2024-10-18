@@ -1,5 +1,7 @@
 # A Notion of Complexity for Theory of Mind via Discrete World Models
 
+![Logo Dino](./image/dino.png)
+
 See main paper -> [arxiv](https://arxiv.org/abs/2406.11911)
 
 ## Main results
