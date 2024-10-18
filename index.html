@@ -99,18 +99,18 @@
   </head>
   <body>
     <section class="hero">
-      <div class="hero-body">
+      <div class="hero-body pb-0">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                A Notion of Complexity for Theory of Mind via Discrete World
-                Models
+                A Notion of Complexity for <span style="color:#51a86e">Theory</span> of <span style="color:#51a86e">Mind</span> <span class="is-size-3">via Discrete World
+                Models</span>
               </h1>
               <div class="is-size-5 publication-authors">
                 <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank"
+                  <a href="https://scholar.google.com/citations?user=b1Twe6sAAAAJ" target="_blank"
                     >X. Angelo Huang</a
                   ><sup>*1</sup>,</span
                 >
@@ -235,6 +235,15 @@
             </div>
           </div>
         </div>
+        
+        <div class="columns  is-centered">
+            <figure class="column is-one-fifth image">
+            <img
+              src="static/dino.png"
+              alt="Logo Dino"
+            />
+        </figure>
+    </div>
       </div>
     </section>
 
@@ -264,22 +273,12 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Theory of Mind (ToM) can be used to assess the capabilities of
-                Large Language Models (LLMs) in complex scenarios where social
-                reasoning is required. While the research community has proposed
-                many ToM benchmarks, their hardness varies greatly, and their
-                complexity is not well defined. This work proposes a framework
-                to measure the complexity of ToM tasks. We quantify a problem's
-                complexity as the number of states necessary to solve it
-                correctly. Our complexity measure also accounts for spurious
-                states of a ToM problem designed to make it apparently harder.
-                We use our method to assess the complexity of five widely
-                adopted ToM benchmarks. On top of this framework, we design a
-                prompting technique that augments the information available to a
-                model with a description of how the environment changes with the
-                agents' interactions. We name this technique Discrete World
-                Models (DWM) and show how it elicits superior performance on ToM
-                tasks.
+                Theory of Mind (ToM) can be used to assess the capabilities of Large Language Models (LLMs) in complex scenarios where social reasoning is required.
+                 While the research community has proposed many ToM benchmarks, their hardness varies greatly, and their complexity is not well defined. 
+                 This work proposes a framework inspired by <b>cognitive load theory</b> to measure the complexity of ToM tasks. 
+                 We <i>quantify a problem's complexity</i> as the number of states necessary to solve it correctly. Our complexity measure also accounts for spurious states of a ToM problem designed to make it apparently harder. We use our method to assess the complexity of five widely adopted ToM benchmarks. 
+                 On top of this framework, we design a prompting technique that augments the information available to a model with a description of how the environment changes with the agents' interactions. 
+                 We name this technique <b>Discrete World Models (DWM)</b> and show how it elicits superior performance on ToM tasks.
               </p>
             </div>
           </div>
@@ -325,7 +324,14 @@
                   </div>
                 </div>
                 <div class="columns is-centered has-text-centered">
-                  <div class="column is-two-thirds">
+
+                    <div class="column is-two-thirds">
+                      <p class="is-size-5 pb-1">
+                          Discrete World Models (DWM) splits a
+                          prompt into chunks and queries an LLM,
+                          at each <i>timestep</i>, to provide a <b>concise representation</b>
+                          of the environment.
+                      </p>
                     <figure class="image">
                       <img
                         src="static/paper-images/dwm-example-numbered.png"
@@ -353,6 +359,62 @@
       </div>
     </section>
 
+
+    <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Observations</h2>
+                <div>
+                    <p class="is-size-4 pb-1">
+                        DWM makes crucial information in a prompt <b>explicit</b>
+                    </p>
+                  <div class="columns is-centered has-text-centered">
+                    <div class="column is-two-thirds">
+                      <figure class="image">
+                        <img
+                          src="static/paper-images/dwm-vs-cot.png"
+                          alt="Comparison between dwm and cot"
+                        />
+                        <figcaption>
+                            Example of a a ToMI instance where GPT-4 fails when prompted with CoT, yet succeeds with DWM.
+                            CoT elicits an untruthful reasoning process (in <span style="color:red">red</span>), while DWM correctly informs the model with the correct
+                            information about Benjamin’s first-order belief (in <span style="color:green">green</span>).
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div class="pt-3">
+                    <p class="is-size-5 pb-1">
+                        The complexity framework fits in Sweller's <a href="https://www.researchgate.net/publication/225728481_Element_Interactivity_and_Intrinsic_Extraneous_and_Germane_Cognitive_Load", target="_blank">Cognitive Load theory</a>
+                    </p>
+                  <div class="columns is-centered has-text-centered">
+                    <div class="column is-two-thirds">
+                      <figure class="image">
+                        <img
+                          src="static/paper-images/sweller.png"
+                          alt="Sweller's theory"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  
+                </div>
+
+
+              </div>
+  
+              
+            </div>
+  
+          </div>
+        </div>
+      </section>
+
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
@@ -360,8 +422,12 @@
             <div class="column is-four-fifths">
               <h2 class="title is-3">Results</h2>
               <div>
+                <p class="is-size-5 pb-1">
+
                 We show that the complexity correlates with the error rate of
                 the models on the ToM tasks.
+                </p>
+                
                 <div class="columns is-centered has-text-centered">
                   <div class="column is-half">
                     <figure class="image">
