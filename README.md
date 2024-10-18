@@ -1,7 +1,7 @@
 # A Notion of Complexity for Theory of Mind via Discrete World Models
 
 <p align="center">
-  <img alt="Logo Dino" src="./image/dino.png" width="24em"/>
+  <img alt="Logo Dino" src="./image/dino.png" width="30%"/>
 </p>
 
 
